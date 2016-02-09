@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Speed Reader App</title>
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/form.css">
+		<link rel="stylesheet" href="css/radio.css">
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Speed Reader</h1>
+			</header>
+			<section class="main">
+				<section class="player">
+					<div class="wordToRead">difference</div>
+					<nav>
+						<button id="openFile" onclick="controls.openFile();">Open</button>
+						<button class="play">Play</button>
+						<button class="pause">Pause</button>
+					</nav>
+					<fieldset>
+						<label for="wpm">Words per minute</label>
+						<label>
+							<input type="radio" name="wpm" value="100">
+							<span>100</span>
+						</label>
+						<label>
+							<input type="radio" name="wpm" value="200">
+							<span>200</span>
+						</label>
+						<label>
+							<input type="radio" name="wpm" value="300">
+							<span>300</span>
+						</label>
+						</fieldset>
+				</section>
+
+				<article id="editor" class="textToRead" contenteditable="true">
+					<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit possimus neque illo tenetur iure. Architecto similique, repudiandae impedit, ratione aut atque! Similique expedita, molestiae ullam nulla voluptates, voluptatem sapiente doloribus!</div>
+					<div>Aliquam eius velit architecto atque cum quisquam, minus neque culpa quia laboriosam quod, dolore possimus! Natus molestiae, quo veniam quaerat officia, ea alias accusantium, nostrum ipsa necessitatibus molestias velit rem!</div>
+					<div>Eligendi enim non, nihil debitis praesentium ex eveniet culpa quae ipsam qui! Suscipit quam inventore est ullam eius sequi numquam doloribus similique a distinctio, velit iste molestiae provident sint facilis!</div>
+					<div>Quas, quisquam. At a alias tempore hic aut atque laboriosam rerum! Molestias minima, totam magnam, natus sequi officia nobis laborum fugit magni provident voluptates ducimus. Est rerum magnam sunt tenetur.</div>
+					<div>Odio dolorem labore reiciendis illo maxime officia esse pariatur, quasi commodi quae veniam doloremque, velit optio id ducimus deserunt eligendi itaque non similique magnam porro, nam possimus. Eius, magnam, facilis.</div>
+					<div>Odit, repellendus quo voluptate nam ratione repellat minima perspiciatis ut neque magni? Excepturi voluptatum blanditiis totam, quaerat iste voluptate officiis, rem nam ipsam, tenetur, quo ratione aperiam doloribus voluptas! Distinctio.</div>
+					<div>Eligendi necessitatibus dolores minima doloribus, fuga corporis sed fugiat accusantium soluta quia laboriosam, repellendus. Impedit, perspiciatis libero, recusandae non iusto officiis, illo culpa doloribus odio distinctio quam nesciunt repellat esse?</div>
+					<div>Inventore deleniti voluptate, delectus tempora iste adipisci, suscipit. Eaque itaque ut vitae, repellat maiores suscipit, dolorum. Quasi, nobis, inventore velit ut, voluptatem impedit tempora consequatur dolore earum soluta aut aspernatur.</div>
+					<div>Tempora sequi debitis incidunt nam eos amet maiores saepe ducimus voluptates corrupti eligendi dignissimos itaque, obcaecati natus eaque asperiores libero quam, sit atque earum molestias. Fugiat itaque nulla cupiditate vitae!</div>
+					<div>Reiciendis aperiam, expedita. Laboriosam quaerat aliquid autem excepturi perspiciatis quos repellendus minima nesciunt! Ex voluptatibus reiciendis, modi molestiae porro. Deserunt praesentium ipsum rem accusantium? Optio commodi cumque quas, voluptates natus!</div>
+				</article>
+			</section>
+			<footer></footer>
+		</div>
+		<script>
+		var controls = require('./js/controls');
+		var wordContainer = document.querySelector('.wordToRead');
+		wordContainer.innerText = controls.getWords();
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+form {
+	margin: 1rem;
+}
+
+legend {
+	font-size: 1rem;
+	font-weight: 100;
+}
+
+fieldset {
+	background: none;
+	border: 1px solid #f5f5f5;
+	padding: 1rem;
+}
+
+label {
+	display: inline-block;
+	font-size: 1.5rem;
+	font-weight: 200;
+	vertical-align: top;
+}
+
+label input[type="text"] {
+  width: 100%;
+}
+/* Inputs */
+input, button {
+	background: none;
+	border: none;
+	font-size: 1.3rem;
+	font-weight: 100;
+	outline: none;
+}
+
+input {
+	border: 1px solid #ddd;
+	display: inline-block;
+}
+input[type="text"] {
+	padding:.5rem;
+	text-align: left;
+	width: 90%;
+}
+/* Hidden to allow custom styling */
+input[type="radio"],
+input[type=checkbox] {
+  display: none;
+}
+
+/* Buttons */
+button {
+	background-color: #111;
+	display: inline-block;
+	border: 1px solid #222;
+	color: #fff;
+	padding: .25rem 2rem;
+}
+button[type=submit],
+button.close{
+	font-size: 2rem;
+	float: right;
+}
+/* Place holder */
+::-webkit-input-placeholder {
+   color: #ddd;
+	 font-size: 1rem;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #ddd;
+	 font-size: 1rem;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #ddd;
+	 font-size: 1rem;
+}
+
+:-ms-input-placeholder {
+   color: #ddd;
+	 font-size: 1rem;
+}
+
+.extra-section{
+	width: 100%;
+}
+.extra-input{
+	float: right;
+  position: relative;
+  top: -2.6rem;
+  left: 8rem;
+  width: 100%;
+  border-radius: 0 4.25rem 4.25rem 0;
+  border-left: none;
+  text-align: center;
+}

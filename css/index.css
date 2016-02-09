@@ -1,0 +1,50 @@
+html,
+body {
+	box-sizing: border-box;
+	font-size: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body, div, input, label, button, fieldset, form {
+	font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 1.4rem;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	padding-top: 2rem;
+	text-align: center;
+}
+
+header h1 {
+	font-size: 3rem;
+	font-weight: 100;
+	margin: 0;
+	padding: 0;
+}
+
+.player {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Text Inputed by user */
+.textToRead,
+.wordToRead {
+	border: 1px solid #111;
+	display: block;
+	height: auto;
+	line-height: 1.2;
+	margin: 1.5rem;
+	padding: 1rem 3rem;
+}
+.textToRead > div {
+	margin: 1rem 0;
+}
+.wordToRead {
+	border-width: 1px 0  1px 0;
+	font-size: 2rem;
+}
