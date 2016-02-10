@@ -48,3 +48,6 @@ header h1 {
 	border-width: 1px 0  1px 0;
 	font-size: 2rem;
 }
+.paused {
+	color: #eee;
+}

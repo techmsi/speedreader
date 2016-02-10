@@ -14,11 +14,12 @@
 			</header>
 			<section class="main">
 				<section class="player">
-					<div class="wordToRead">difference</div>
+					<div class="wordToRead">
+						<span id="reader" class="word paused">Click play!</span>
+					</div>
 					<nav>
-						<button id="openFile" onclick="controls.openFile();">Open</button>
-						<button class="play">Play</button>
-						<button class="pause">Pause</button>
+						<button class="openFile" onclick="controls.openFile();">Load text</button>
+						<button class="play" title="play/pause">&#9654;</button>
 					</nav>
 					<fieldset>
 						<label for="wpm">Words per minute</label>
@@ -53,9 +54,18 @@
 			<footer></footer>
 		</div>
 		<script>
-		var controls = require('./js/controls');
-		var wordContainer = document.querySelector('.wordToRead');
-		wordContainer.innerText = controls.getWords();
+			var controls = require('./js/controls');
+			var playButton = document.querySelector('.play');
+			var wordEl = document.querySelector('.word');
+
+			playButton.addEventListener('click', function(){
+				wordEl.classList.toggle('paused');
+				// Toggles icon based on class
+				var paused = wordEl.classList.contains('paused');
+				this.innerHtml = (paused) ? '||' : '&#9654;';
+				// Starts/Stops the reader
+    		controls.readWords(paused);
+			});
 
 		</script>
 	</body>
