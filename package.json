@@ -11,10 +11,11 @@
     "url": "techmsi.github.io"
   },
   "electronVersion": "0.36.0",
+  "localModulesPath": "./node_modules/.bin",
   "scripts": {
     "test": "xo",
-    "start": "electron .",
-    "build": "electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --all --version=$npm_package_electronVersion"
+    "start": "$npm_package_localModulesPath/electron .",
+    "build": "$npm_package_localModulesPath/electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --all --version=$npm_package_electronVersion"
   },
   "files": [
     "index.js",
@@ -28,6 +29,7 @@
   "dependencies": {
     "electron-debug": "^0.5.0",
     "fs": "0.0.2",
+    "jquery": "^2.2.0",
     "lodash": "^4.3.0"
   },
   "devDependencies": {
