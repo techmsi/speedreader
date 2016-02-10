@@ -62,7 +62,7 @@
 				wordEl.classList.toggle('paused');
 				// Toggles icon based on class
 				var paused = wordEl.classList.contains('paused');
-				this.innerHtml = (paused) ? '||' : '&#9654;';
+				this.innerHTML = (paused) ? '||' : '&#9654;';
 				// Starts/Stops the reader
     		controls.readWords(paused);
 			});

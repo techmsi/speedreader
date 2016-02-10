@@ -22,7 +22,6 @@ module.exports.readWords = function (isPaused){
         console.log('current - %s, %s', current, words[current]);
 
         $reader
-        // .removeClass('paused')
         .attr('data-index', current)
         .animate({ opacity:1.0 }, 400)
         .text(words[current])
@@ -52,5 +51,3 @@ module.exports.openFile = function () {
   });
  });
 }
-
-//module.exports.getWords = getWords();
