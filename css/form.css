@@ -50,9 +50,10 @@ input[type=checkbox] {
 /* Buttons */
 button {
 	background-color: #111;
-	display: inline-block;
 	border: 1px solid #222;
 	color: #fff;
+	cursor: pointer;
+	display: inline-block;
 	padding: .25rem 2rem;
 }
 button[type=submit],
