@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="css/index.css">
 		<link rel="stylesheet" href="css/form.css">
 		<link rel="stylesheet" href="css/radio.css">
+		<link rel="stylesheet" href="css/buttons.play.css">
 	</head>
 	<body>
 		<div class="container">
@@ -18,8 +19,8 @@
 						<span id="reader" class="word paused">Click play!</span>
 					</div>
 					<nav>
-						<button class="openFile" onclick="controls.openFile();">Load text</button>
-						<button class="play" title="play/pause">&#9654;</button>
+						<button class="open">Load text</button>
+						<button class="play" title="play/pause"></button>
 					</nav>
 					<fieldset>
 						<label for="wpm">Words per minute</label>
@@ -38,7 +39,7 @@
 						</fieldset>
 				</section>
 
-				<article id="editor" class="textToRead" contenteditable="true">
+				<article id="editor" class="textToRead">
 					<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit possimus neque illo tenetur iure. Architecto similique, repudiandae impedit, ratione aut atque! Similique expedita, molestiae ullam nulla voluptates, voluptatem sapiente doloribus!</div>
 					<div>Aliquam eius velit architecto atque cum quisquam, minus neque culpa quia laboriosam quod, dolore possimus! Natus molestiae, quo veniam quaerat officia, ea alias accusantium, nostrum ipsa necessitatibus molestias velit rem!</div>
 					<div>Eligendi enim non, nihil debitis praesentium ex eveniet culpa quae ipsam qui! Suscipit quam inventore est ullam eius sequi numquam doloribus similique a distinctio, velit iste molestiae provident sint facilis!</div>
@@ -55,14 +56,25 @@
 		</div>
 		<script>
 			var controls = require('./js/controls');
+			var openFileButton = document.querySelector('.open');
 			var playButton = document.querySelector('.play');
 			var wordEl = document.querySelector('.word');
 
+			window.addEventListener('DOMContentLoaded', function(){
+				controls.setWords();
+			}, false);
+
+			openFileButton.addEventListener('click', function(){
+				controls.openFile();
+				wordEl.classList.add('paused');
+				controls.readWords(true);
+			});
+
 			playButton.addEventListener('click', function(){
 				wordEl.classList.toggle('paused');
+				this.classList.toggle('active');
 				// Toggles icon based on class
 				var paused = wordEl.classList.contains('paused');
-				this.innerHTML = (paused) ? '||' : '&#9654;';
 				// Starts/Stops the reader
     		controls.readWords(paused);
 			});
