@@ -1,5 +1,7 @@
 # speedreader
 
+![Icon.png](https://bitbucket.org/repo/yGAxoB/images/3163821243-Icon.png)
+
 A speed reader app for any loaded text.
 
 ## Overview
