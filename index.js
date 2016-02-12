@@ -23,7 +23,7 @@ function createMainWindow() {
 	});
 
 	win.loadURL(`file://${__dirname}/index.html`);
-	win.openDevTools();
+	if (process.env.NODE_ENV === 'development') win.openDevTools();
 	win.on('closed', onClosed);
 
 	return win;
